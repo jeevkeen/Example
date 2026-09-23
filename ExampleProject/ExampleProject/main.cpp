@@ -1,59 +1,7 @@
 #include <iostream>
 #include <stdexcept>
 #include <clocale>
-
-
-class Triangle {
-private:
-    double _width;
-    double _height;
-
-public:
-    Triangle() {
-        _width = 1;
-        _height = 1;
-    }
-
-    Triangle(double width, double height) {
-        if (width > 0 && height > 0) {
-            _width = width;
-            _height = height;
-        }
-        else {
-            throw std::invalid_argument(std::string("Error: param(s) must be >0"));
-        }
-    }
-
-    double getWidth() const noexcept {
-        return _width;
-    }
-
-    double getHeight() const noexcept {
-        return _height;
-    }
-
-    void setWidth(double width) {
-        if (width > 0) {
-            _width = width;
-        }
-        else {
-            throw std::invalid_argument(std::string("Error: width must be >0"));
-        }
-    }
-
-    void setHeight(double height) {
-        if (height > 0) {
-            _height = height;
-        }
-        else {
-            throw std::invalid_argument(std::string("Error: height must be >0"));
-        }
-    }
-
-    double getArea() const noexcept {
-        return (0.5 * _width * _height);
-    }
-};
+#include <triangle.h>
 
 
 int main() {
