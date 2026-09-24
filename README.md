@@ -1,5 +1,4 @@
-# Example
-First try Git Bush
+dev branch README.md update
 
 # Пример проекта с репозиторием на github
 
